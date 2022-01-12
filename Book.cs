@@ -10,11 +10,13 @@ namespace BookLibraryProject
     {
         // Data Members
         private string code;
+        private bool isTaken;
 
         // Constructor
         public Book(string code)
         {
             this.code = code;
+            this.isTaken = false;
         }
 
         // Methods
@@ -55,10 +57,37 @@ namespace BookLibraryProject
             return true;
         }
 
+        public void SetThisSpecificBookToBeTakenInTheLibrary(List<Book> books)
+        {
+            foreach (Book b in books)
+            {
+                if (b.GetCode().Equals(this.code))
+                {
+                    b.SetIsTakenTrue();
+                }
+            }
+        }
+
         // Get Methods
         public string GetCode()
         {
             return this.code;
+        }
+
+        public bool GetIsTaken()
+        {
+            return this.isTaken;
+        }
+
+        // Set Methods
+        public void SetIsTakenTrue()
+        {
+            this.isTaken = true;
+        }
+
+        public void SetIsTakenFalse()
+        {
+            this.isTaken = false;
         }
 
 

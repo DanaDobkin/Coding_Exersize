@@ -10,6 +10,7 @@ namespace BookLibraryProject
         private string lastName;
         private int id;
         private List<Book> books;
+        //private bool 
 
         public Subscriber(string lastName, int id)
         {
