@@ -134,7 +134,7 @@ namespace BookLibraryProject
                                         {
                                             if (!(FindHowManyBookASpesificSubscriberHas(subs, GetID(q)) <= 0))
                                             {
-                                                does book exist in the library
+                                                //does book exist in the library
                                             }
                                             else
                                             {
