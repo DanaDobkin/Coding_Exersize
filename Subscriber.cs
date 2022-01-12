@@ -23,7 +23,7 @@ namespace BookLibraryProject
         // Methods
         public bool VerifyingID()
         {
-            if (this.id.ToString().Length != 9)
+            if (this.id != null && this.id.ToString().Length != 9)
             {
                 Console.WriteLine("The ID is incorrect");
 
@@ -72,6 +72,19 @@ namespace BookLibraryProject
         public int CountBooks()
         {
             return this.books.Count;
+        }
+
+        public void SetAllBooksToBeTaken()
+        {
+            if (this.books != null)
+            {
+                foreach (Book b in this.books)
+                {
+                    b.SetIsTakenTrue();
+                }
+            }
+            else
+                Console.WriteLine("This subscriber doesn't have any books.");
         }
 
         // Get Methods
